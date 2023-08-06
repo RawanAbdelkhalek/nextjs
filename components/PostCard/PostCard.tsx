@@ -1,4 +1,5 @@
 import React from 'react';
+import LikeButton from "../LikeButton/LikeButton";
 import { CardHeaderStyle, 
         ProfilePicStyle, 
         UsernameStyle,
@@ -40,6 +41,7 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
             />
             <ProductNameStyle>{product_name}</ProductNameStyle>
             <ModelNameStyle>{producer_name}</ModelNameStyle>
+            <LikeButton/>
         </ImgContainerStyle>
 
         <LikeCountBoxStyle>
