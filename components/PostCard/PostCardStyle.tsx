@@ -28,7 +28,7 @@ export const UsernameStyle = styled.span`
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: small;
-    width: 40%;
+    width: 100%;
     color: #2E3B8A;
     position: absolute;
     top: 50%;
@@ -112,6 +112,6 @@ export const TagStyle = styled(DescriptionTextStyle)`
 
 export const ViewCommentStyle = styled(TagStyle)`
     color: #83858f;
-    top: 260%;
+    top: 200%;
 
 `

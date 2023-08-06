@@ -7,7 +7,7 @@ function NavButton({page, src}: any) {
 
     const router = useRouter();
     const [currentPage, setCurrentPage] = useState(page);
-
+    
     const handleClick = () =>{
         console.log("Page Changed");
         if(currentPage == "Home") router.replace("/")
