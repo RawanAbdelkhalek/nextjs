@@ -12,13 +12,25 @@
     },
     {
         "name": "Olivia Clark",
-        "profile_src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg",
-        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg",
+        "profile_src": "https://unsplash.com/photos/9tfEBHiUpJU",
+        "src": "https://unsplash.com/photos/a-half-moon-seen-through-the-branches-of-a-tree-kP4V5_RWXHU",
         "product_name": "Product H",
         "likes": 123,
         "description": "Fusce eu ligula vitae mauris tincidunt posuere sed at magna.",
         "tags": ["tag4", "tag8", "tag10"],
         "comments_count": 2,
         "producer_name": "123 Industries"
+      },
+
+      {
+        "name": "R",
+        "profile_src": "https://funylife.in/wp-content/uploads/2023/04/58_Cute-Girl-Pic-WWW.FUNYLIFE.IN_-1-1024x1024.jpg",
+        "src": "https://www.kraftwerk.at/app/uploads/fly-images/962/reference-img-worlds-of-adventure-park-4-1920x9999.jpg",
+        "product_name": "Produc",
+        "likes": 150,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "tags": ["tag1", "tag2", "tag3"],
+        "comments_count": 2,
+        "producer_name": "ABC Company"
       }
 ]

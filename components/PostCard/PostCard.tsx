@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import LikeButton from "../LikeButton/LikeButton";
 import { CardHeaderStyle, 
         ProfilePicStyle, 
@@ -19,11 +19,27 @@ import { CardHeaderStyle,
 
 function PostCard({ name, profile_src, src, product_name, likes,description, 
     tags, comments_count, producer_name } : any) {
+    
+    const obj = {
+        "name" : name,
+        "profile_src" : profile_src,
+        "src" : src,
+        "product_name" : product_name,
+        "likes" : likes,
+        "description" : description,
+        "tags": tags,
+        "comments_count" : comments_count,
+        "producer_name": producer_name,
+        };
+
+    let object = JSON.stringify(obj);
 
     let tagText = "";
     for(let i=0; i<tags.length; i++){
             tagText += ('#'+tags[i]+" ");
     }
+
+    // console.log(typeof(object));
   return (
     <CardContainer>
         <CardHeaderStyle>
@@ -41,7 +57,7 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
             />
             <ProductNameStyle>{product_name}</ProductNameStyle>
             <ModelNameStyle>{producer_name}</ModelNameStyle>
-            <LikeButton/>
+            <LikeButton liked={false} object={object}/>
         </ImgContainerStyle>
 
         <LikeCountBoxStyle>

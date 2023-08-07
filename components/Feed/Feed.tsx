@@ -3,6 +3,8 @@ import { FeedContainerStyle } from './FeedStyle'
 import PostCard from '../PostCard/PostCard';
 import data from "../../public/data.json";
 
+
+
 function Feed() {
   return (
     <FeedContainerStyle>
