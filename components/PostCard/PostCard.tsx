@@ -20,7 +20,7 @@ import { CardHeaderStyle,
 function PostCard({ name, profile_src, src, product_name, likes,description, 
     tags, comments_count, producer_name } : any) {
     
-    const obj = {
+    const object = {
         "name" : name,
         "profile_src" : profile_src,
         "src" : src,
@@ -32,13 +32,15 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
         "producer_name": producer_name,
         };
 
-    let object = JSON.stringify(obj);
+    // let object = JSON.stringify(obj);
 
-    let tagText = "";
-    for(let i=0; i<tags.length; i++){
+    let tagText = ""
+    if(typeof(tags) != "undefined" && tags.length > 0){
+        for(let i=0; i<tags.length; i++){
             tagText += ('#'+tags[i]+" ");
+        }
     }
-
+    
     // console.log(typeof(object));
   return (
     <CardContainer>

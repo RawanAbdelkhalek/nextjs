@@ -5,5 +5,5 @@ export const FeedContainerStyle = styled.div`
     max-width: 700px;
     display: block;
     margin: auto;
-    background-color: white; 
+    background-color: #f8f3f3; 
 `
