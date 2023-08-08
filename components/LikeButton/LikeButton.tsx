@@ -38,36 +38,12 @@ function LikeButton({object} : LikeButtonProps) {
       setPosts(existingArray);
     }
     else{
-      let newArray = existingArray.filter((item:string) => item.name !== object.name);;
-      // for(let i=0; i<existingArray.length; i++){
-      //   if(existingArray[i].name != object.name)
-      //     newArray.push(existingArray[i]);
-      // }
+      let newArray = existingArray.filter(item => item.name !== object.name);
       localStorage.setItem("posts", JSON.stringify(newArray));
       setPosts(newArray);
     }
   }
 
-  // useEffect(() => {
-  //   const tmp = localStorage.getItem('posts');
-  //   let existingArray = tmp ? JSON.parse(tmp) : [];
-
-  //   if (likeState) {
-  //     existingArray.push(object);
-  //     localStorage.setItem("posts", JSON.stringify(existingArray));
-  //   }
-  //   else{
-  //     let newArray = [];
-  //     for(let i=0; i<existingArray.length; i++){
-  //       if(existingArray[i] != object){
-          
-  //         if(existingArray[i].name != object.name )newArray.push(existingArray[i]);
-  //       }
-  //     }
-  //     localStorage.setItem("posts", JSON.stringify(newArray));
-  //   }
-
-  // },[likeState, object])
 
   useEffect(()=>{
     const tmp = localStorage.getItem('posts');

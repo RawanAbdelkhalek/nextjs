@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ -------- HOW TO OPEN THE PROJECT -----------------
+ 1. Extract the zip file using your operating system's file explorer or a command-line tool.
+ 2. Run the following command to install the required packages
+ (npm install)
+ 3. make sure you have React Icons and Styled Components by running 
+npm install react-icons --save
 
-## Getting Started
+a. After installing the packages, you can start the Next.js development server by running:
+npm install styled-components
+npm install react-icons 
 
-First, run the development server:
+NOTE: if you are using yarn replace each "npm install" with "yarn add"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ -------- HOW TO VIEW THE PROJECT -----------------
+1. intiate your local server npm run dev
+2. open your favourite on browerser: http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ -------- HOW THE PROJECT IS DONE-----------------
 
-## Learn More
+- It is a Nextjs Project with TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+- in the app folder you can find the two pages (page.tsx => the home page) (fav/page.tsx => liked page)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- there are five components each have a styled component file and a logic/main component file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- the data used are in public/data.json
 
-## Deploy on Vercel
+- routing by (useRouter hook)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- caching data is done via browser local storage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- components major functionality:
+    1. Feed: retrieving data and view it as form of posts
+    2. Navbar: Container of the navbar navigation
+    3. NavbarButton: routing between pages (the routing is implemented by useRouter hook)
+    4. PostCard: represents each post content and view it in the screen accordingly
+    5. LikeButton: like or unlike the posts, intialize the local storage as empty array, adding the post to   the array or removing it from the array by (useEffect hook, useState hook, localStorage.setItem).
+
+- fav/fav.tsx : retrieving data from local storage (useEffect hook, useState hook, localStorage.getItem)., and display it on the liked page

@@ -12,7 +12,6 @@ export default function Home() {
   useEffect(() => {
     const value = localStorage.getItem("posts");
     setData(value ? JSON.parse(value) : []);
-    //console.log(row);
   }, []);
 
   return (
