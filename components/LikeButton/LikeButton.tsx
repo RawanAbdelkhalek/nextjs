@@ -23,7 +23,6 @@ interface LikeButtonProps {
 function LikeButton({object} : LikeButtonProps) {
 
   const [likeState, setLikeState] = useState(false);
-  // const [posts, setPosts] = useState<Post[]>([]);
 
   const toggle = () => {
     setLikeState(!likeState);
@@ -32,24 +31,27 @@ function LikeButton({object} : LikeButtonProps) {
 
   useEffect(() => {
     const tmp = localStorage.getItem('posts');
-    const existingArray = tmp ? JSON.parse(tmp) : [];
+    let existingArray = tmp ? JSON.parse(tmp) : [];
 
     if (likeState) {
       existingArray.push(object);
       localStorage.setItem("posts", JSON.stringify(existingArray));
     }
     else{
-      console.log(typeof(object))
-      const newArray = existingArray.filter((item: object) => item == object);
-      // console.log(newArray)
+      let newArray = [];
+      for(let i=0; i<existingArray.length; i++){
+        if(existingArray[i] != object){
+          
+          if(existingArray[i].name != object.name )newArray.push(existingArray[i]);
+        }
+      }
+      console.log(newArray)
       localStorage.setItem("posts", JSON.stringify(newArray));
     }
 
   },[likeState])
 
-// useEffect( () => {
-//   localStorage.setItem("posts", JSON.stringify(posts));
-// }, [posts])
+
 
   return (
     <LikeButtonStyle liked={likeState} onClick={toggle}/>
