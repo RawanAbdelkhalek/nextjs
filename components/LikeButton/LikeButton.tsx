@@ -38,7 +38,7 @@ function LikeButton({object} : LikeButtonProps) {
       setPosts(existingArray);
     }
     else{
-      let newArray = existingArray.filter(item => item.name !== object.name);;
+      let newArray = existingArray.filter((item:string) => item.name !== object.name);;
       // for(let i=0; i<existingArray.length; i++){
       //   if(existingArray[i].name != object.name)
       //     newArray.push(existingArray[i]);
