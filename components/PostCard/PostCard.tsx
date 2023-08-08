@@ -59,7 +59,7 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
             />
             <ProductNameStyle>{product_name}</ProductNameStyle>
             <ModelNameStyle>{producer_name}</ModelNameStyle>
-            <LikeButton liked={false} object={object}/>
+            <LikeButton object={object}/>
         </ImgContainerStyle>
 
         <LikeCountBoxStyle>
