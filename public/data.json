@@ -89,7 +89,7 @@
         "producer_name": "XYZ Corporation"
       },
       {
-        "name": "Olivia Clark",
+        "name": "Olivia_Clark",
         "profile_src": "https://static.vecteezy.com/system/resources/thumbnails/004/800/431/small/young-black-woman-smiling-and-looking-at-camera-in-kitchen-free-photo.jpg",
         "src": "https://www.wide-gamut.com/assets/wide-gamut-photo05-p3.jpg",
         "product_name": "Product H",
@@ -101,7 +101,7 @@
       },
       
       {
-        "name": "John Doe",
+        "name": "John Do",
         "profile_src": "https://furbo.org/color/WideGamut/Harbor_ProPhoto.jpg",
         "src": "https://furbo.org/color/WideGamut/Harbor_ProPhoto.jpg",
         "product_name": "Product A",
@@ -112,7 +112,7 @@
         "producer_name": "ABC Company"
       },
       {
-        "name": "Alice Johnson",
+        "name": "Alice_Johnson",
         "profile_src": "https://img.freepik.com/free-photo/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university_273609-1270.jpg",
         "src": "https://img.freepik.com/free-photo/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university_273609-1270.jpg",
         "product_name": "Product B",
@@ -123,7 +123,7 @@
         "producer_name": "XYZ Corporation"
       },
       {
-        "name": "Sarah Smith",
+        "name": "Sarah__Smith",
         "profile_src": "https://st4.depositphotos.com/5989284/20550/i/600/depositphotos_205506006-stock-photo-portrait-smiling-handsome-male-worker.jpg",
         "src": "https://www.wide-gamut.com/assets/wide-gamut-photo02-srgb.jpg",
         "product_name": "Product C",
@@ -134,7 +134,7 @@
         "producer_name": "123 Industries"
       },
       {
-        "name": "Emily Davis",
+        "name": "Emilia Davis",
         "profile_src": "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80",
         "src": "https://webkit.org/blog-files/color-gamut/Italy-sRGB.jpg",
         "product_name": "Product D",
@@ -145,7 +145,7 @@
         "producer_name": "Acme Corporation"
       },
       {
-        "name": "Michael Wilson",
+        "name": "Michael Frank Wilson",
         "profile_src": "https://webkit.org/blog-files/color-gamut/Italy-sRGB.jpg",
         "src": "https://contentblog.abaenglish.com/wp-content/uploads/2022/04/01122824/objects-in-english-scaled.jpg",
         "product_name": "Product E",
@@ -156,7 +156,7 @@
         "producer_name": "Global Enterprises"
       },
       {
-        "name": "Emma Martin",
+        "name": "Emmalia Martin",
         "profile_src": "https://contentblog.abaenglish.com/wp-content/uploads/2022/04/01122824/objects-in-english-scaled.jpg",
         "src": "https://media.istockphoto.com/id/1155741541/photo/light-bulb-in-hand.jpg?s=612x612&w=0&k=20&c=M-hubtfkzdmefSW3qIREX1cE2AYknS1IzNBhjOXtKd8=",
         "product_name": "Product F",
@@ -167,7 +167,7 @@
         "producer_name": "ABC Company"
       },
       {
-        "name": "Ethan Thomas",
+        "name": "Ethan_Thomas",
         "profile_src": "https://media.altphotos.com/cache/images/2017/08/22/07/752/woman-sunglasses-portrait.jpg",
         "src": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/09/Two-girlfriends-students-on-a-coffee-break-outdoors-1296x728-header-1296x728.jpg?w=1155&h=1528",
         "product_name": "Product G",
@@ -178,7 +178,7 @@
         "producer_name": "XYZ Corporation"
       },
       {
-        "name": "Olivia Clark",
+        "name": "OliviaClark",
         "profile_src": "https://www.pngitem.com/pimgs/m/271-2716856_pizza-clipart-pizza-slice-triangle-shape-objects-clipart.png",
         "src": "https://www.pngitem.com/pimgs/m/271-2716856_pizza-clipart-pizza-slice-triangle-shape-objects-clipart.png",
         "product_name": "Product H",

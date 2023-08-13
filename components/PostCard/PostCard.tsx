@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+'use client'
+import React from 'react';
+import { useLikeStore } from '@/public/store';
 import LikeButton from "../LikeButton/LikeButton";
 import { CardHeaderStyle, 
         ProfilePicStyle, 
@@ -32,7 +34,9 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
         "producer_name": producer_name,
         };
 
-    // let object = JSON.stringify(obj);
+    const tmp = localStorage.getItem('posts');
+    const isLiked = tmp?.includes(JSON.stringify(object)) || false;
+   
 
     let tagText = ""
     if(typeof(tags) != "undefined" && tags.length > 0){
@@ -59,7 +63,7 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
             />
             <ProductNameStyle>{product_name}</ProductNameStyle>
             <ModelNameStyle>{producer_name}</ModelNameStyle>
-            <LikeButton object={object}/>
+            <LikeButton isLiked={isLiked} object={object}/>
         </ImgContainerStyle>
 
         <LikeCountBoxStyle>

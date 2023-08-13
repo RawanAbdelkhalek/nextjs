@@ -15,15 +15,14 @@ interface Post {
 }
 
 interface LikeButtonProps {
-  // liked: boolean;
+  liked: boolean;
   object: Post; 
 }
 
 
-function LikeButton({object} : LikeButtonProps) {
+function LikeButton({object, isLiked} : LikeButtonProps) {
 
-  const [likeState, setLikeState] = useState(false);
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [likeState, setLikeState] = useState(isLiked);
 
   const toggle = () => {
 
@@ -35,20 +34,12 @@ function LikeButton({object} : LikeButtonProps) {
     if (!likeState) {
       existingArray.push(object);
       localStorage.setItem("posts", JSON.stringify(existingArray));
-      setPosts(existingArray);
     }
     else{
-      let newArray = existingArray.filter(item => item.name !== object.name);
+      let newArray = existingArray.filter((item: any) => item.name !== object.name);
       localStorage.setItem("posts", JSON.stringify(newArray));
-      setPosts(newArray);
     }
   }
-
-
-  useEffect(()=>{
-    const tmp = localStorage.getItem('posts');
-    setPosts(tmp ? JSON.parse(tmp) : []);
-  },[]);
 
   return (
     <LikeButtonStyle liked={likeState} onClick={toggle}/>
