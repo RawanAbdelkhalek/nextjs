@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 import { FeedContainerStyle } from './FeedStyle'
 import PostCard from '../PostCard/PostCard';
 import data from "../../public/data.json";
-
+import { usePostStore } from '@/public/store';
 
 
 function Feed() {
@@ -14,10 +14,13 @@ function Feed() {
     localStorage.setItem("posts", JSON.stringify(existingArray));
   },[]);
 
+  const setPost = usePostStore((state) => state.setPost);
+  setPost(data);
+
   return (
     <FeedContainerStyle>
-      {data.map((item: any, index : any) => (
-        <PostCard key={index} {...item}/>
+      {data.map((item: any, index : number) => (
+        <PostCard key={index} index={index}/>
       ))}
     </FeedContainerStyle>
     

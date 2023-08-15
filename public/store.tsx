@@ -1,10 +1,11 @@
 import { create } from 'zustand'
 
-interface likeState{
-    isLiked: boolean;
-    setIsLiked: (isLiked: boolean) => void
+interface postState{
+    post: object;
+    setPost: (post: object) => void
 }
-export const useLikeStore = create<likeState>()((set) => ({
-  isLiked: false, 
-  setIsLiked: ( isLiked: boolean) => set({isLiked})
+
+export const usePostStore = create<postState>()((set) => ({
+  post: {}, 
+  setPost: ( post : object) => set({post})
 }))

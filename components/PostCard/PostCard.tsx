@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { useLikeStore } from '@/public/store';
+import { usePostStore } from '@/public/store';
 import LikeButton from "../LikeButton/LikeButton";
 import { CardHeaderStyle, 
         ProfilePicStyle, 
@@ -18,25 +18,31 @@ import { CardHeaderStyle,
         TagStyle,
         ViewCommentStyle,} from './PostCardStyle';
 
+interface PostCardProps {
+    index : number;
+}
 
-function PostCard({ name, profile_src, src, product_name, likes,description, 
-    tags, comments_count, producer_name } : any) {
+interface Post {
+name: string;
+profile_src: string;
+src: string;
+product_name: string;
+likes: number;
+description: string;
+tags: string[];
+comments_count: number;
+producer_name: string;
+}
+
+function PostCard( {index} : PostCardProps) {
     
-    const object = {
-        "name" : name,
-        "profile_src" : profile_src,
-        "src" : src,
-        "product_name" : product_name,
-        "likes" : likes,
-        "description" : description,
-        "tags": tags,
-        "comments_count" : comments_count,
-        "producer_name": producer_name,
-        };
+    const post = usePostStore((state) => state.post);
+    //console.log(post[index])
 
     const tmp = localStorage.getItem('posts');
-    const isLiked = tmp?.includes(JSON.stringify(object)) || false;
-   
+    const isLiked = tmp?.includes(JSON.stringify(post[index])) || false;
+
+    const { name, profile_src, src, product_name, likes,description,tags, comments_count, producer_name } : any = post[index];
 
     let tagText = ""
     if(typeof(tags) != "undefined" && tags.length > 0){
@@ -45,7 +51,6 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
         }
     }
     
-    // console.log(typeof(object));
   return (
     <CardContainer>
         <CardHeaderStyle>
@@ -63,7 +68,7 @@ function PostCard({ name, profile_src, src, product_name, likes,description,
             />
             <ProductNameStyle>{product_name}</ProductNameStyle>
             <ModelNameStyle>{producer_name}</ModelNameStyle>
-            <LikeButton isLiked={isLiked} object={object}/>
+            <LikeButton isLiked={isLiked} index={index}/>
         </ImgContainerStyle>
 
         <LikeCountBoxStyle>

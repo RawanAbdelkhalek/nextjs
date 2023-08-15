@@ -31,6 +31,8 @@ NOTE: if you are using yarn replace each "npm install" with "yarn add"
 
 - caching data is done via browser local storage
 
+- state mangement is done by zustand.
+
 - components major functionality:
     1. Feed: retrieving data and view it as form of posts
     2. Navbar: Container of the navbar navigation

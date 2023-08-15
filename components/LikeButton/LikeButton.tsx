@@ -1,28 +1,19 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {LikeButtonStyle} from "./LikeButtonStyle"
+import { usePostStore } from '@/public/store';
 
-interface Post {
-  name: string;
-  profile_src: string;
-  src: string;
-  product_name: string;
-  likes: number;
-  description: string;
-  tags: string[];
-  comments_count: number;
-  producer_name: string;
-}
 
 interface LikeButtonProps {
-  liked: boolean;
-  object: Post; 
+  isLiked: boolean;
+  index: number; 
 }
 
 
-function LikeButton({object, isLiked} : LikeButtonProps) {
+function LikeButton({index, isLiked} : LikeButtonProps) {
 
   const [likeState, setLikeState] = useState(isLiked);
+  const post = usePostStore((state) => state.post);
 
   const toggle = () => {
 
@@ -32,11 +23,11 @@ function LikeButton({object, isLiked} : LikeButtonProps) {
     let existingArray = tmp ? JSON.parse(tmp) : [];
   
     if (!likeState) {
-      existingArray.push(object);
+      existingArray.push(post[index]);
       localStorage.setItem("posts", JSON.stringify(existingArray));
     }
     else{
-      let newArray = existingArray.filter((item: any) => item.name !== object.name);
+      let newArray = existingArray.filter((item: any) => JSON.stringify(item) !== JSON.stringify(post[index]));
       localStorage.setItem("posts", JSON.stringify(newArray));
     }
   }
