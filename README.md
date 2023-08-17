@@ -41,6 +41,7 @@ NOTE: if you are using yarn replace each "npm install" with "yarn add"
     5. LikeButton: like or unlike the posts, intialize the local storage as empty array, adding the post to   the array or removing it from the array by (useEffect hook, useState hook, localStorage.setItem).
  
 
-      <img src="https://t.bkit.co/w_64dde8ca0604d.gif" />
-
 - fav/page.tsx : retrieving data from local storage (useEffect hook, useState hook, localStorage.getItem)., and display it on the liked page
+
+  <img src="https://t.bkit.co/w_64dde8ca0604d.gif" />
+
