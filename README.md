@@ -42,6 +42,3 @@ NOTE: if you are using yarn replace each "npm install" with "yarn add"
  
 
 - fav/page.tsx : retrieving data from local storage (useEffect hook, useState hook, localStorage.getItem)., and display it on the liked page
-
-  <img src="https://t.bkit.co/w_64dde8ca0604d.gif" />
-
